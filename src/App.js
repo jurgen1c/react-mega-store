@@ -3,18 +3,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/header/Header';
 import Home from './components/home/Home';
+import Checkout from './components/checkout/Checkout';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
+        <Header/>
         <Switch>
           <Route path='/checkout'>
-            <Header/>
-            <h1>Checkout</h1>
+            <Checkout />
           </Route>
           <Route path='/'>
-            <Header />
             <Home />
           </Route>
         </Switch>
