@@ -1,5 +1,4 @@
 import './product.css';
-import StarIcon from '@material-ui/icons/Star';
 
 const Product = ({id, title, image, price, rating}) => {
     return (
@@ -11,7 +10,7 @@ const Product = ({id, title, image, price, rating}) => {
                     <strong>{price}</strong>
                 </p>
                 <div className='product__rating'>
-                    {Array(rating).fill().map((_, i) => {<StarIcon/>})}
+                    {Array(rating).fill().map((_, i) => {<p>⭐</p>})}
                 </div>
             </div>
             <img src={image} alt='' />
