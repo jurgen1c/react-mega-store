@@ -20,6 +20,7 @@ const Subtotal = () => {
                 thousandSeparator={true}
                 prefix={'$'}
             />
+            <button>Proceed to Checkout</button>
         </div>
     )
 }

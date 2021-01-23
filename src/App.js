@@ -18,7 +18,6 @@ const App = () => {
             <Home />
           </Route>
         </Switch>
-        {/* Home */}
       </div>
     </Router>
   );
