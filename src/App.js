@@ -5,9 +5,10 @@ import { auth } from './firebase';
 import { useStateValue } from './context/StateProvider';
 
 import Header from './components/header/Header';
-import Home from './components/home/Home';
-import Checkout from './components/checkout/Checkout';
-import Login from './components/login/Login';
+import Home from './pages/home/Home';
+import Checkout from './pages/checkout/Checkout';
+import Login from './pages/login/Login';
+import Payment from './pages/payment/Payment';
 
 const App = () => {
   const [{}, dispatch] = useStateValue();
@@ -38,6 +39,10 @@ const App = () => {
           <Route path='/checkout'>
             <Header/>
             <Checkout />
+          </Route>
+          <Route path='/payment'>
+            <Header/>
+            <Payment />
           </Route>
           <Route path='/'>
             <Header/>

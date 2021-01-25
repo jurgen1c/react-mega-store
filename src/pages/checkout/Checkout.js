@@ -1,6 +1,6 @@
 import './checkout.css';
-import Subtotal from '../subtotal/Subtotal';
-import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
+import Subtotal from '../../components/subtotal/Subtotal';
+import CheckoutProduct from '../../components/checkoutProduct/CheckoutProduct';
 import { useStateValue } from '../../context/StateProvider';
 
 const Checkout = () => {
