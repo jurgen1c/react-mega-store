@@ -4,12 +4,13 @@ import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 import { useStateValue } from '../../context/StateProvider';
 
 const Checkout = () => {
-    const [{bag},,] = useStateValue();
+    const [{bag, user},,] = useStateValue();
     return (
         <div className='checkout'>
             <div className='checkout__left'>
                 <img className='checkout__ad' src='https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg' alt=''/>
                 <div>
+                    <h3>Hello {user ? user.email : 'Guest'}</h3>
                     <h2 className='checkout__title'>Your shopping Bag</h2>
                     {bag.map(element => (
                         <CheckoutProduct id={element.id} image={element.image} title={element.title} price={element.price} rating={element.rating}/>
