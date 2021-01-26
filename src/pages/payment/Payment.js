@@ -8,6 +8,7 @@ import './payment.css'
 import CheckoutProduct from '../../components/checkoutProduct/CheckoutProduct';
 import { getBasketTotal } from '../../context/reducer';
 import axios from '../../axios';
+import { db } from '../../firebase';
 
 const Payment = () => {
     const [{user, bag}, dispatch] = useStateValue();
@@ -42,6 +43,12 @@ const Payment = () => {
             card: elements.getElement(CardElement)
         }}).then(({paymentIntent}) => {
             //Payment intent = payment confirmation
+            db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id).set({
+                bag: bag,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created,
+            })
+
             setSucceeded(true);
             setError(null);
             setProcessing(false);
