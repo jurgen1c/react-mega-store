@@ -10,8 +10,8 @@ const Orders = () => {
 
     useEffect(() => {
         if (user) {
-            db.collection('users').doc(user.uid).collection('orders').orderBy('created', 'desc').onSnapshot((snap) => {
-                setOrders(snap.docs.map(doc => ({
+            db.collection('users').doc(user?.uid).collection('orders').orderBy('created', 'desc').onSnapshot(snapshot => {
+                setOrders(snapshot.docs.map(doc => ({
                     id: doc.id,
                     data: doc.data(),
                 })))
