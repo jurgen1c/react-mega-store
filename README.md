@@ -1,8 +1,8 @@
-# Weather-App
+# Notmazon App
 
-### What we built
+### What I built
 
-> A current weather check site were users can search by city and add favorites. Weather data gathered from OpenWeatherMap and favorites saved to localStorage.
+> A mega store type e-commerce site based of the Amazon website. It has users, db & cloud functions with Firebase. Stripe is integrated to the app making it posible to accept credit crd payments.
 
 ### Project screenshot
 
@@ -15,24 +15,22 @@
  
  - Clone this code: 
         ```
-        git clone https://github.com/jurgen1c/weather-app.git
+        git clone https://github.com/jurgen1c/react-mega-store.git
         ```
 
 - Run the command ```npm install``` from root directory to install the app dependencies.
 
-- Run the command ```npm run build``` to bundle up the files.
-
-- Run the command ```npm run dev``` to test on localhost:8080.
+- Run the command ```npm run start```.
 
 
 ### Build With
 
--	HTML
+- HTML
 - JavaScript
-- Webpack
+- React
 - SASS  
 
-### Check out the live demo [here](https://dazzling-jones-95a292.netlify.app/)     
+### Check out the live demo [here](https://my--clone-6f40a.web.app/)     
 
 ## 👤 Author
 
