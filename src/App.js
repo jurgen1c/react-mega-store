@@ -12,7 +12,8 @@ import Checkout from './pages/checkout/Checkout';
 import Login from './pages/login/Login';
 import Payment from './pages/payment/Payment';
 import Orders from './pages/orders/Orders';
-
+import ShowProduct from './pages/show/ShowProduct'
+;
 const promise = loadStripe('pk_test_51IDcemDalhLGaLp7sZPfPDkpBe9LhPkZyzzRwLIcQ0p0vl6lp6jfdqPnyCRQr8g0QEzUyrNzpT7OpzSrvG8B7qUb00xG7Lj4Fh');
 
 const App = () => {
@@ -38,6 +39,9 @@ const App = () => {
     <Router>
       <div className="App">
         <Switch>
+          <Route path='/showproduct'>
+            < ShowProduct/>
+          </Route>
           <Route path='/orders'>
             <Header/>
             <Orders />

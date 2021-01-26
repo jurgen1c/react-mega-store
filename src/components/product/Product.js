@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useStateValue } from '../../context/StateProvider';
 import './product.css';
 
@@ -20,7 +21,9 @@ const Product = ({id, title, image, price, rating}) => {
     return (
         <div key={`container${id}`} className='product'>
             <div className='product__info'>
-                <p>{title}</p>
+                <Link to='/showproduct'>
+                    <p>{title}</p>
+                </Link>
                 <p className='product__price'>
                     <small>$</small>
                     <strong>{price}</strong>
